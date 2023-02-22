@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start":"node src/server.js",
+    "start": "node src/server.js",
+    "server": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
+    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +18,9 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.9.2",
+    "netlify-lambda": "^2.0.16",
     "node-fetch": "^3.3.0",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "serverless-http": "^3.1.1"
   }
 }

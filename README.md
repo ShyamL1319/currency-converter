@@ -1,7 +1,7 @@
-# Currency Converter
+# Currency Converter Web Application 
 
-## To start backend go to src folder and do node server.js;
+## To use the application and clonse the repo and got to the folder and do npm install && npm run start
 
-## To start Frontend go to frontend folder and do npm run build;
+## Now you can use the application at http://localhost:3000
 
-# goto to http://localhost:4200
+
