@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: aliceblue;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #087ef3;
+}
+
+.heading {
+    font-family: 'Robota';
+    margin: 35px auto 20px;
+}
+
+hr {
+    border-top: 3px solid #000;
+    width: 50%;
+    margin-bottom: 55px;
+}
+
+.main {
+    width: 50vw;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: rgb(200 164 147 / 0.5);
+    color: #090909;
+}
+
+label {
+    font-size: 20px;
+}
+
+.btn {
+    width: 200px;
+}
+
+#finalAmount {
+    font-family: 'Lobster', cursive;
+    display: none;
+    margin: 50px auto;
+}
+
+#finalAmount h2 {
+    font-size: 50px;
+}
+
+.finalValue {
+    font-family: 'Amiri', serif;
+}
+
+@media (max-width: 768px) {
+    hr {
+        width: 60%;
+    }
+
+    .main {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .heading {
+        font-size: 60px;
+    }
+
+    hr {
+        width: 75%;
+    }
+
+    #finalAmount h2,
+    .finalValue {
+        font-size: 40px;
+    }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

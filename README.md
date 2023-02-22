@@ -40,12 +40,13 @@ git clone git@github.com:ShyamL1319/currency-converter.git
 
 ```
 cd techgrit && npm install && npm run start
+cd frontend && npm install && ng serve
 ```
 
 <p>3. Now Go to browser and Enter below mentioned url</p>
 
 ```
-http://localhost:3000
+http://localhost:4200
 ```
 
 <h2>🛡️ License:</h2>

@@ -1,0 +1,74 @@
+    
+    <div *ngIf="this.loader.getLoading()" class="cssload-container">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+    
+    
+    <h1 class="heading text-center display-2">
+      Techgrit Currency Converter</h1>
+    <hr>
+    <div class="container">
+      <h6 class="lastupdated-date">Last Updated : {{lastUpdatedTime}}</h6>
+      <div class="main">
+        <form [formGroup]="currencyConvertorForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label for="oamount">
+              Amount to Convert :
+            </label>
+            <input type="text" class="form-control searchBox" placeholder="0.00" id="oamount" formControlName="amount">
+          </div>
+      
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">From</span>
+                </div>
+                <select class="form-control from" id="sel1" formControlName="from">
+                    <option value="">Choose From Currency</option>
+                    <option *ngFor="let currency of currencies">{{currency["name"] | uppercase}}</option>
+                </select>
+              </div>
+            </div>
+      
+            <div class="col-sm-6">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">To</span>
+                </div>
+                <select class="form-control to" id="sel2" formControlName="to">
+                    <option value="">Choose To Currency</option>
+                    <option *ngFor="let currency of currencies">{{currency["name"]|uppercase}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+      
+          <div class="text-center">
+      
+            <!-- convert button -->
+            <button class="btn btn-primary convert m-2" type="submit">
+              Convert
+            </button>
+      
+            <!-- reset button -->
+            <button class="btn btn-primary m-2" (click)="clearVal()">
+              Reset
+            </button>
+          </div>
+        </form>
+      </div>
+    
+      <div *ngIf="convertedAmount > 0" class="text-center">
+    
+        <!-- Display the converted amount -->
+        <h2>Converted Amount :
+          <span class="finalValue" style="color:green;">
+            {{convertedAmount}} {{ currencyConvertorForm.controls.to.value}}
+          </span>
+        </h2>
+      </div>
+    </div>
+
+
+<router-outlet></router-outlet>
