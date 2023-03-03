@@ -23,10 +23,6 @@ app.use("/api/exchange", routes);
 // app.all('/', function (req, res) {
 //     res.status(200).sendFile(`/`, { root: _app_folder });
 // });
-app.use("/*", (req, res) => {
-    console.log(path.join(__dirname, "dist/public", "index.html"));
-    res.sendFile(path.join(__dirname, "dist/public", "index.html"))
-})
 app.use(errorHanlerMiddleware);
 connectDB()
 module.exports = app;
