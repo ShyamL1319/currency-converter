@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm install && node server.js",
     "server": "NODE_ENV=development netlify-lambda build src",
     "build": "cd frontend && npm install && ng build --configuration production && cd ../ && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
