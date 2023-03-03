@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Exchange = require("../model/currency");
-const { data, data1 } = require("../sample_data");
+const { data, data1 } = require("../sample/sample_data");
 const getExchangeRate = async (req, res) => {
     const { from, to, amount } = req.params;
     const fromExcchangeData = await Exchange.findOne({ name: from.toLowerCase() })

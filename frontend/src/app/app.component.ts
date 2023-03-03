@@ -10,7 +10,6 @@ import { LoaderService } from './service/loader.service';
 })
 export class AppComponent implements OnInit {
   baseUrl = "http://localhost:3000/api/exchange/"
-  oppoSuits: any = ['Men', 'Women', 'Boys', 'Inspiration']
   submitted = false;
   convertedAmount = 0;
   lastUpdatedTime: any;

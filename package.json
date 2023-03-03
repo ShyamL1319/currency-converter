@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "server": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda serve src",
+    "start": "node server.js",
+    "server": "NODE_ENV=development netlify-lambda build src",
+    "build": "cd frontend && npm install && ng build --configuration production && cd ../ && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,13 +14,18 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.3.3",
+    "babel-preset-es2015": "^6.24.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.9.2",
     "netlify-lambda": "^2.0.16",
     "node-fetch": "^3.3.0",
-    "nodemon": "^2.0.20",
     "serverless-http": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
