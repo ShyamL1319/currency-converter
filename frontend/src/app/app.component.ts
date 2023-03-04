@@ -9,7 +9,7 @@ import { LoaderService } from './service/loader.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  baseUrl = "http://localhost:3000/api/exchange/"
+  baseUrl = "https://currency-converter-znk1.onrender.com/api/exchange/"
   submitted = false;
   convertedAmount = 0;
   lastUpdatedTime: any;
