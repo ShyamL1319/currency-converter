@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const URI = "mongodb+srv://task-mgmt:12345@cluster0.6qsga9k.mongodb.net/exchange";
+const URI = process.env.MONGO_DB_URI;
+require("dotenv").config();
 mongoose.set('strictQuery', true);
 const connectDB = (uri = URI) => {
     mongoose
