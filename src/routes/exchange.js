@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Exchange = require("../model/currency");
-const { data, data1 } = require("../sample/sample_data");
+// const { data, data1 } = require("../sample/sample_data");
 const getExchangeRate = async (req, res) => {
     const { from, to, amount } = req.params;
     const fromExcchangeData = await Exchange.findOne({ name: from.toLowerCase() })
@@ -16,14 +16,14 @@ const getExchangeRate = async (req, res) => {
 }
 
 const getCurrencyList = async (req, res) => {
-    const listdata = await Exchange.aggregate([{ $project: { _id: 0, name: 1,data:1 } }]);
+    const listdata = await Exchange.aggregate([{ $project: { _id: 0, name: 1, data: 1 } }]);
     res.json({ listdata });
     res.end();
 }
 router.get("/:from/:to/:amount", getExchangeRate);
 
 router.post("/seed", async (req, res, next) => {
-    let seedingData = JSON.parse(JSON.stringify(data1))
+    let seedingData = [];//JSON.parse(JSON.stringify(data1))
     const countDocument = await Exchange.countDocuments();
     let data = [];
     for (let key of Object.keys(seedingData)) {
