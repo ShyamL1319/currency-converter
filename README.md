@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://glittering-wisp-7586f8.netlify.app/](https://glittering-wisp-7586f8.netlify.app/)
+[https://currency-converter-znk1.onrender.com/](https://currency-converter-znk1.onrender.com/)
 
 <h2>Project Screenshots:</h2>
 
@@ -36,17 +36,25 @@ Here're some of the project's best features:
 git clone git@github.com:ShyamL1319/currency-converter.git
 ```
 
-<p>2. Go To techgrit folder and Install dependency then run the application using below mentioned command.</p>
+<p>2. Go To currency-converter-master folder and Install dependency then run the application using below mentioned command.</p>
 
 ```
-cd techgrit && npm install && npm run start
-cd frontend && npm install && ng serve
+cd currency-converter-master && npm run dev 
 ```
 
-<p>3. Now Go to browser and Enter below mentioned url</p>
+<p>3. Create new .env file in root folder with to variable PORT and MONGO_DB_URI</p>
+// .env file
 
 ```
-http://localhost:4200
+PORT = 3000
+MONGO_DB_URI = "mongodb+srv://<username>:<password>@cluster0.6qsga9k.mongodb.net/<dbname>"
+i.e. "mongodb+srv://user2:password2@cluster0.6qsga9k.mongodb.net/test"
+```
+
+<p>4. Now Go to browser and Enter below mentioned url</p>
+
+```
+http://localhost:3000
 ```
 
 <h2>🛡️ License:</h2>

@@ -4,10 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "npm install && node server.js",
-    "server": "NODE_ENV=development netlify-lambda build src",
-    "build": "npm install @angular/cli@14 && cd frontend && npm install && ng build --configuration production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm install && nodemon server.js",
+    "dev": "npm install @angular/cli@14 && cd frontend && npm install && ng build --configuration development",
+    "build": "npm install @angular/cli@14 && cd frontend && npm install && ng build --configuration production"
   },
   "keywords": [],
   "author": "",
@@ -25,7 +24,7 @@
     "serverless-http": "^3.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
+    "nodemon": "^2.0.21",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }

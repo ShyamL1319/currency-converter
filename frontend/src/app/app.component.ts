@@ -3,13 +3,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from "@angular/common/http"
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LoaderService } from './service/loader.service';
+import { environment } from 'src/environments/environment';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  baseUrl = "https://currency-converter-znk1.onrender.com/api/exchange/"
+  baseUrl = environment.production == true ? "https://currency-converter-znk1.onrender.com/api/exchange/" : "http://localhost:3000/api/exchange";
   submitted = false;
   convertedAmount = 0;
   lastUpdatedTime: any;
